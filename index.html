@@ -4,27 +4,46 @@
 <head>
     <title>Page Title</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Thai:wght@100..900&family=Oswald:wght@200..700&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Thai:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Yuji+Mai&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Workshop #HTML - FORM</h1>
+    <div class="TEXT">
+        <h1>Workshop #HTML - FORM</h1>
+        <h1>Workshop #HTML - FORM</h1>
+    </div>
+    
     <form>
         <table>
             <tr>
-                <td> ชื่อ </td>
-                <td><input type="Text" id="FirstName" nam="FirstName"></td>
+                <td><label for="FirstName">ชื่อ</label></td>
+                <td><input type="Text" id="FirstName" class="Box"></td>
             </tr>
             <tr>
                 <td> สกุล </td>
-                <td><input type="text" id="LastName" name="lastName"></td>
+                <td><input type="text" id="LastName" class="Box"></td>
             </tr>
             <tr>
                 <td> วัน/เดือน/ปีเกิด</td>
-                <td><input type="date" /></td>
+                <td><input type="date" class="Box"/></td>
             </tr>
             <tr>
                 <td> อายุ </td>
-                <td><input type="number" /></td>
+                <td><input type="number" class="Box"/></td>
             </tr>
             <tr>
                 <td> เพศ </td>
@@ -35,21 +54,22 @@
             </tr>
             <tr>
                 <td> รูป </td>
-                <td><input type="file"></td>
+                <td><input type="file" ></td>
             </tr>
             <tr>
                 <td> ที่อยู่ </td>
-                <td><textarea rows="6" cols="30"></textarea></td>
+                <td><textarea rows="6" cols="30" class="Box"></textarea></td>
             </tr>
             <tr>
                 <td> สีที่ชอบ </td>
                 <td>
-                    <select id="color" name="color">
+                    <select id="color" name="color" class="Box">
                         <option value="Red">สีแดง</option>
                         <option value="Green">สีเขียว</option>
                         <option value="Yellow">สีเหลือง</option>
                         <option value="Blue">สีน้ำเงิน</option>
                         <option value="Orange">สีส้ม</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -61,11 +81,13 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="checkbox" id="agree" name="agree">ยินยอมให้เก็บข้อมูล</td>
+                <td><br><input type="checkbox" id="agree" name="agree">ยินยอมให้เก็บข้อมูล</td>
             </tr>
             <tr>
-                <td><input type="reset" value="Reset"></td>
-                <td><input type="button" value="Submit"></td>
+                <td><br><button class="btn" id="reset">Reset</button></td>
+                <td><br><button class="btn" id="submit">Submit</button></td>
+                <!--<td><br><br><input type="reset" id="reset" value="Reset"></td>
+                <td><br><br><input type="submit" id="submit" value="Submit"></td>-->
             </tr>
         </table>
     </form>
