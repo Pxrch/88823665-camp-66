@@ -21,9 +21,9 @@ class UserController extends Controller
     function edit_action(Request $req){
         $user = User::find($req->id);
 
-        $user->name = $req->name;
-        $user->email = $req->email;
-        $user->password = $req->password;
+        $user->name = ($req->name == null)?$user->name:$req->name;
+        $user->email = ($req->email == null)?$user->email:$req->email;
+        $user->password = ($req->password == null)?$user->password:$req->password;
 
         $user->save();
 
