@@ -13,7 +13,8 @@
                     <form action="{{ url('/register') }}" method="post">
                         @csrf
                         <div class="input-group mb-3">
-                            <input type="text" name="name" id="name" oninput="return checkname();" class="form-control" placeholder="Full Name" />
+                            <input type="text" name="name" id="name" oninput="return checkname();"
+                                class="form-control" placeholder="Full Name" />
                             <div class="input-group-text"><span class="bi bi-person"></span></div>
                             <div class="valid-feedback"></div>
                             <div class="invalid-feedback">
@@ -21,7 +22,8 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="email" name="email" id="email" oninput="return checkemail();" class="form-control" placeholder="Email" />
+                            <input type="email" name="email" id="email" oninput="return checkemail();"
+                                class="form-control" placeholder="Email" />
                             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
                             <div class="valid-feedback"></div>
                             <div class="invalid-feedback">
@@ -29,7 +31,8 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" name="password" id="password" oninput="return checkPassword();" class="form-control" placeholder="Password" />
+                            <input type="password" name="password" id="password" oninput="return checkPassword();"
+                                class="form-control" placeholder="Password" />
                             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
                             <div class="valid-feedback">
                                 รหัสผ่านปลอดภัยมาก เยี่ยมจริงๆ
@@ -71,8 +74,8 @@
 @endsection
 
 @section('scripts')
-<script>
-    function checkname() {
+    <script>
+        function checkname() {
             $('#name').removeClass('is-invalid');
             $('#name').removeClass('is-valid');
             let name = document.getElementById('name');
@@ -125,10 +128,15 @@
 
         function checkValue() {
             let checkbox = document.getElementById("flexCheckDefault");
-            if (!checkbox.checked){
-                alert("🚨 Please check the checkbox");
+            if (!checkbox.checked) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Please check the CheckBox!",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
                 return false;
             }
         }
-</script>
+    </script>
 @endsection

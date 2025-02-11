@@ -5,10 +5,15 @@ use App\Http\Controllers\MyController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 
+Route::get('/product', [ProductController::class, '']);
 Route::get('/login',
     [LoginController::class, 'index']);
+
+Route::post('/login',
+    [loginController::class, 'login']);
 
 Route::get('/register',
     [RegisterController::class, 'regis']);
